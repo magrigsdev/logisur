@@ -9,7 +9,8 @@ class HomeController extends Controller
     //
 
     public function index(){
-        
+        session()->put('shop',false);
+
         return view('home');
     }
 }

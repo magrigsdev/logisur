@@ -22,4 +22,4 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'contact'])->name('contact');
-Route::get('shop', [ShopController::class, 'shop'])->name('shop');
+Route::post('shop', [ShopController::class, 'shop'])->name('shop');

@@ -45,6 +45,16 @@
             color: darkorange !important;
         }
 
+        .shop_container{
+          display: flex;
+          align-content: center;
+          justify-content: center;
+        }
+        .mymg{
+          max-width: 25%;
+          height: auto;
+        }
+
         
     </style>
 </head>
@@ -67,6 +77,12 @@
         <li class="nav-item">        
             <a class="nav-link  {{ request()->is('/')? 'active': ''}}" href="{{url('/')}} ">Accueil</a>
         </li>
+
+        @if (session('shop'))
+        <li class="nav-item">        
+            <a class="nav-link  {{ request()->is('shop')? 'active': ''}}" href="#">Shop</a>
+        </li>
+        @endif
 
         <li class="nav-item">
           <a class="nav-link {{ request()->is('contact') ? 'active': ''}}" href="{{url('contact')}}">Contact</a>
